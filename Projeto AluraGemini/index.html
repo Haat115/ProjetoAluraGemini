@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Coffee</title>
+</head>
+
+<body>
+    <header>
+        <h1>Principais receitas de cafeteria</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Procurar receita" id="campo-pesquisa">
+            <button onclick="pesquisar()">Buscar</button>
+        </section>
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+
+            <div id="historia">
+                <h2>A História do Café: Uma Breve Viagem</h2>
+                <p>
+                    A origem do café remonta à Etiópia, na África. A lenda mais conhecida conta a história de um pastor
+                    que observou suas cabras ficando mais enérgicas após comerem frutos de um cafeeiro. Intrigado, ele
+                    também experimentou os frutos e sentiu os mesmos efeitos estimulantes.
+
+                    A partir da Etiópia, o café se espalhou pela Península Arábica e, posteriormente, para o Egito e a
+                    Europa. Os árabes dominaram a produção e o comércio do café por séculos, valorizando-o como uma
+                    bebida estimulante e medicinal.
+
+                    A chegada do café à Europa foi gradual. Inicialmente, a bebida era consumida em locais públicos,
+                    como cafés e mesones, e era vista com certa desconfiança pela Igreja Católica. No entanto, com o
+                    tempo, o café se popularizou e se tornou uma bebida essencial para a vida social e intelectual.
+
+                    O Brasil se tornou o maior produtor mundial de café no século XIX. A plantação de café impulsionou a
+                    economia brasileira e transformou o país em uma potência agrícola. A cultura do café também moldou a
+                    sociedade brasileira, influenciando a arquitetura, a culinária e os costumes.
+
+                    Hoje, o café é uma das bebidas mais consumidas no mundo. Sua produção e consumo se espalharam por
+                    todos os continentes, e existem diversas variedades e formas de preparo. O café continua sendo uma
+                    bebida apreciada por seu sabor, aroma e propriedades estimulantes.
+
+                    Em resumo, a história do café é uma jornada fascinante que atravessa continentes e séculos. Desde
+                    suas origens na África até se tornar uma bebida globalmente consumida, o café deixou sua marca na
+                    história da humanidade.
+                </p>
+            </div>
+
+            <!--<div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/2/23/Captura_de_Tela_2017-08-30_às_23.42.42.png">
+                    <h2>Café expresso</h2>
+                    <p class="descricao-meta">O expresso é mais do que apenas um café forte. É um ritual, uma arte e um sabor
+                        intenso em cada gole. Preparado sob alta pressão, a água quente extrai o melhor dos grãos de café moídos
+                        finamente, resultando em uma bebida cremosa e aromática. O espresso é a base para muitas outras bebidas como
+                        o cappuccino e o latte, e é apreciado por sua complexidade de sabores e a rapidez do preparo.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Café_expresso" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Coffee_with_milk_%28563800%29.jpg/250px-Coffee_with_milk_%28563800%29.jpg">
+                    <h2>Pingado</h2>
+                    <p class="descricao-meta">O café pingado é uma bebida tradicional brasileira, apreciada por sua simplicidade e
+                        sabor único. Preparado com leite quente e um "pingo" de café, a proporção entre os dois ingredientes varia
+                        de acordo com o gosto pessoal de cada um. O resultado é uma bebida cremosa e suave, perfeita para quem busca
+                        um café mais leve e menos intenso que o espresso. O pingado é um ícone das padarias e botecos brasileiros,
+                        sendo consumido em um tradicional copo de vidro, acompanhado de um pão na chapa.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Café_com_leite" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Latte.jpg/250px-Latte.jpg">
+                    <h2>Latte</h2>
+                    <p class="descricao-meta">O latte é uma bebida de café italiana que conquistou o mundo por sua cremosidade e
+                        sabor equilibrado. Preparado com espresso e leite vaporizado, o latte apresenta uma camada generosa de
+                        espuma, que confere à bebida uma textura aveludada. A proporção de café e leite varia, mas geralmente o
+                        leite predomina, resultando em um sabor mais suave e cremoso em comparação com outras bebidas à base de
+                        espresso. O latte é uma escolha perfeita para quem busca um café com leite saboroso e reconfortante.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Latte" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/A_cappuccino.jpg/220px-A_cappuccino.jpg">
+                    <h2>Cappuccino</h2>
+                    <p class="descricao-meta">O cappuccino é uma bebida italiana que equilibra perfeitamente o sabor intenso do café
+                        espresso com a cremosidade do leite vaporizado e a doçura da espuma. Tradicionalmente, as proporções são
+                        iguais: um terço de café espresso, um terço de leite vaporizado e um terço de espuma de leite. Essa
+                        combinação resulta em uma bebida aveludada, aromática e com uma camada de espuma densa e persistente. O
+                        cappuccino é frequentemente decorado com um pouco de canela em pó ou chocolate ralado, que adicionam um
+                        toque especial ao sabor.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Cappuccino" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mocaccino-Coffee.jpg/200px-Mocaccino-Coffee.jpg">
+                    <h2>Mocha</h2>
+                    <p class="descricao-meta">O mocha é uma indulgente variação do latte, que combina a riqueza do café espresso com
+                        a doçura do chocolate. Essa bebida, originária da cidade de Mocha, no Iêmen, é preparada com espresso, leite
+                        vaporizado, xarope de chocolate e, frequentemente, chantilly. O resultado é uma experiência sensorial única,
+                        com a harmonia perfeita entre o amargor do café, a cremosidade do leite e a suavidade do chocolate. O mocha
+                        é a escolha ideal para quem busca um café com um toque mais doce e indulgente.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Moca_(café)" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Starbucks_frappuccino.JPG/233px-Starbucks_frappuccino.JPG">
+                    <h2>Frapuccino</h2>
+                    <p class="descricao-meta">O frappuccino é uma bebida gelada e refrescante, perfeita para os dias quentes.
+                        Originário dos Estados Unidos, o frappuccino é uma mistura cremosa de café espresso, leite, xarope de sabor,
+                        gelo e, muitas vezes, chantilly. Essa combinação resulta em uma bebida espessa e adocicada, com diversas
+                        opções de sabores, como caramelo, chocolate e frutas. O frappuccino é uma opção popular entre os jovens e
+                        aqueles que buscam um café com um toque mais divertido e moderno.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Frappuccino" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Blue_Bottle%2C_Kyoto_Style_Ice_Coffee_%285909775445%29.jpg/220px-Blue_Bottle%2C_Kyoto_Style_Ice_Coffee_%285909775445%29.jpg">
+                    <h2>Iced coffee</h2>
+                    <p class="descricao-meta">O café gelado é uma bebida versátil e refrescante, perfeita para os dias quentes.
+                        Preparado com café coado ou espresso, combinado com leite, gelo e, muitas vezes, adoçantes e outros
+                        ingredientes como xaropes e cremes, o café gelado oferece uma experiência sensorial única. Sua versatilidade
+                        permite inúmeras variações, desde o clássico café com leite gelado até opções mais elaboradas com sabores
+                        exóticos e toppings diversos. O café gelado é uma ótima alternativa para quem busca um café saboroso e
+                        energizante, sem abrir mão da refrescância.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Café_gelado" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Espresso_and_tonic%2C_COFFEE_CITEN%2C_Akiha%2C_Niigata%2C_Niigata%2C_Japan%2C_May_2023.jpg/250px-Espresso_and_tonic%2C_COFFEE_CITEN%2C_Akiha%2C_Niigata%2C_Niigata%2C_Japan%2C_May_2023.jpg">
+                    <h2>Espresso Tônica</h2>
+                    <p class="descricao-meta">O espresso tônica é uma bebida que une o intenso sabor do café espresso à carbonatação
+                        da água tônica, resultando em uma experiência única e refrescante. Essa combinação surpreendente cria uma
+                        bebida leve e aromática, perfeita para quem busca uma alternativa aos cafés tradicionais. A espresso tônica
+                        é servida em camadas, com o espresso sendo adicionado por cima da água tônica gelada, criando um efeito
+                        visualmente atraente. Opcionalmente, pode ser adicionado um toque cítrico com limão ou laranja, realçando
+                        ainda mais os sabores.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Espresso_Tônica" target="_blank">Saiba mais..</a>
+                </div>
+            
+                <div class="item-resultado">
+                    <img class="descricao-nome"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Café_coado.jpg/220px-Café_coado.jpg">
+                    <h2>Café coado</h2>
+                    <p class="descricao-meta">O café coado é um clássico atemporal, apreciado por sua simplicidade e sabor
+                        autêntico. Preparado através da passagem de água quente sobre o pó de café moído e filtrado, o café coado
+                        revela os sabores mais puros do grão. Essa metodologia permite apreciar as notas aromáticas e a complexidade
+                        de cada tipo de café, tornando-o uma escolha perfeita para os amantes de um café mais artesanal. O café
+                        coado é uma bebida versátil, que pode ser apreciada tanto puro como acompanhado de leite, açúcar ou outros
+                        complementos, de acordo com o gosto pessoal.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Café_coado" target="_blank">Saiba mais..</a>
+                </div>-->
+
+        </section>
+    </main>
+    <footer>
+        <p>Criado e desenvolvido por Haat115 no Github</p>
+        <p>Pesquise por Sumario e tente algum nome ou número.</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
